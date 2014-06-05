@@ -30,7 +30,7 @@ You can download the files in one of two ways:
   a folder
 
 Once the files are on your PC, add the folder `solarized-matlab` to your Matlab 
-path or **copy** the file file `setupSolarized.m` it to your working folder.
+path or **copy** the file `setupSolarized.m` it to your working folder.
 
 ### Usage
 
