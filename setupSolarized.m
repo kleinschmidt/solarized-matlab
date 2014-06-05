@@ -72,8 +72,8 @@ if strcmp(slrzd,'light')
     warn = sol.orange;  % Set 'Warnings' color
     afhb = 0;           % Set 'Autofix highlight' checkbox to False
     afh  = sol.base2;   % Set 'Autofix highlight' color
-%     ahib = 0;           % Set 'Automatically highlight' checkbox to False
-%     ahi  = sol.violet;  % Set 'Automatically highlight' color
+    ahib = 1;           % Set 'Automatically highlight' checkbox to True
+    ahi  = sol.base2;   % Set 'Automatically highlight' color
     vwss = sol.green;   % Set 'Variables with shared scope' color
     clhb = 0;           % Set 'Highlight cells' checkbox to False
     hclb = 1;           % Set 'Highlight current line' checkbox to True
@@ -94,8 +94,8 @@ elseif strcmp(slrzd,'dark')
     warn = sol.orange;  % Set 'Warnings' color
     afhb = 0;           % Set 'Autofix highlight' checkbox to False
     afh  = sol.base00;  % Set 'Autofix highlight' color
-%     ahib = 0;           % Set 'Automatically highlight' checkbox to False
-%     ahi  = sol.violet;  % Set 'Automatically highlight' color
+    ahib = 1;           % Set 'Automatically highlight' checkbox to True
+    ahi  = sol.base02;  % Set 'Automatically highlight' color
     vwss = sol.green;   % Set 'Variables with shared scope' color
     clhb = 0;           % Set 'Highlight cells' checkbox to False
     hclb = 1;           % Set 'Highlight current line' checkbox to True
@@ -149,9 +149,9 @@ com.mathworks.services.Prefs.setColorPref('ColorsMLintAutoFixBackground',java.aw
 com.mathworks.services.ColorPrefs.notifyColorListeners('ColorsMLintAutoFixBackground'); clear('afhb','afh')
 
 %% Variable and function colors
-% com.mathworks.services.Prefs.setBooleanPref('Editor.VariableHighlighting.Automatic',ahib);
-% com.mathworks.services.Prefs.setColorPref('Editor.VariableHighlighting.Color',java.awt.Color(ahi(1), ahi(2), ahi(3)));
-% com.mathworks.services.ColorPrefs.notifyColorListeners('Editor.VariableHighlighting.Color'); clear('ahib','ahi')
+com.mathworks.services.Prefs.setBooleanPref('Editor.VariableHighlighting.Automatic',ahib);
+com.mathworks.services.Prefs.setColorPref('Editor.VariableHighlighting.Color',java.awt.Color(ahi(1), ahi(2), ahi(3)));
+com.mathworks.services.ColorPrefs.notifyColorListeners('Editor.VariableHighlighting.Color'); clear('ahib','ahi')
 
 % *** need to add checkbox option for variables with shared scope here
 com.mathworks.services.Prefs.setColorPref('Editor.NonlocalVariableHighlighting.TextColor',java.awt.Color(vwss(1), vwss(2), vwss(3)));
